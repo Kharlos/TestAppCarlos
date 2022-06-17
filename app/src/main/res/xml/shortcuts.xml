@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="mainShortcut"
+        android:enabled="true"
+        android:shortcutShortLabel="@string/short_cut_label">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.testsapp"
+            android:targetClass="com.example.testsapp.presentation.MainActivity">
+
+            <extra android:name="content_key" android:value="Msg from shortcut to MainActivity" />
+        </intent>
+    </shortcut>
+    <shortcut
+        android:shortcutId="goToSecondFrag"
+        android:enabled="true"
+        android:shortcutShortLabel="@string/short_cut_label_goto_second_fragment">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.testsapp"
+            android:targetClass="com.example.testsapp.presentation.MainActivity">
+
+            <extra android:name="content_key" android:value="Msg from shortcut to MainActivity" />
+            <extra android:name="deeplink_key" android:value="secondfragment" />
+        </intent>
+    </shortcut>
+</shortcuts>
